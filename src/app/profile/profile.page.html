@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>👤 Mi Perfil</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="navigateToHome()">
+        <ion-icon slot="start" name="home-outline"></ion-icon>
+        Volver al Home
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="profile-header">
+    <ion-text color="dark">
+      <h2>{{ userData.nombre || 'Usuario' }}</h2>
+      <p>{{ userData.email || 'Correo no registrado' }}</p>
+    </ion-text>
+  </div>
+
+  <ion-list>
+    <!-- Nombre -->
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <span *ngIf="!editMode">{{ userData.nombre }}</span>
+      <ion-input *ngIf="editMode && fieldToEdit === 'nombre'" [(ngModel)]="userData.nombre"></ion-input>
+      <ion-button fill="clear" size="small" slot="end" (click)="editField('nombre')">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <!-- Carrera -->
+    <ion-item>
+      <ion-label position="stacked">Carrera</ion-label>
+      <span *ngIf="!editMode">{{ userData.carrera }}</span>
+      <ion-input *ngIf="editMode && fieldToEdit === 'carrera'" [(ngModel)]="userData.carrera"></ion-input>
+      <ion-button fill="clear" size="small" slot="end" (click)="editField('carrera')">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <!-- Semestre -->
+    <ion-item>
+      <ion-label position="stacked">Semestre</ion-label>
+      <span *ngIf="!editMode">{{ userData.semestre }}</span>
+      <ion-input *ngIf="editMode && fieldToEdit === 'semestre'" [(ngModel)]="userData.semestre"></ion-input>
+      <ion-button fill="clear" size="small" slot="end" (click)="editField('semestre')">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <!-- Correo Electrónico -->
+    <ion-item>
+      <ion-label position="stacked">Correo Electrónico</ion-label>
+      <span *ngIf="!editMode">{{ userData.email }}</span>
+      <ion-input *ngIf="editMode && fieldToEdit === 'email'" [(ngModel)]="userData.email"></ion-input>
+      <ion-button fill="clear" size="small" slot="end" (click)="editField('email')">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botón para guardar cambios -->
+  <ion-button expand="block" color="success" (click)="guardarCambios()" *ngIf="editMode">
+    Guardar Cambios
+  </ion-button>
+
+  <!-- Botón para cerrar sesión -->
+  <ion-button expand="block" color="danger" (click)="cerrarSesion()">
+    <ion-icon slot="start" name="log-out-outline"></ion-icon>
+    Cerrar Sesión
+  </ion-button>
+</ion-content>

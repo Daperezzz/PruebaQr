@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateBack()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>📘 Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="header-section">
+    <ion-text color="dark">
+      <h2>Seleccione una asignatura</h2>
+      <p>Revise o registre la asistencia en cada asignatura</p>
+    </ion-text>
+  </div>
+
+  <ion-list>
+    <!-- Lista de asignaturas -->
+    <ion-item button detail lines="inset" (click)="openModal('Inglés', datosIngles)">
+      <ion-icon name="book-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h3>Inglés Intermedio</h3>
+        <p>Asistencia actualizada</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button detail lines="inset" (click)="openModal('Programación', datosProgramacion)">
+      <ion-icon name="code-slash-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h3>Programación de Aplicaciones Móviles</h3>
+        <p>Registro detallado</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button detail lines="inset" (click)="openModal('Estadística', datosEstadistica)">
+      <ion-icon name="stats-chart-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h3>Estadística Descriptiva</h3>
+        <p>Verificar datos</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button detail lines="inset" (click)="openModal('Calidad', datosCalidad)">
+      <ion-icon name="checkmark-done-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h3>Calidad del Software</h3>
+        <p>Últimos reportes</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button detail lines="inset" (click)="openModal('Arquitectura', datosArquitectura)">
+      <ion-icon name="construct-outline" slot="start"></ion-icon>
+      <ion-label>
+        <h3>Arquitectura</h3>
+        <p>Detalles de asistencia</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+ <!-- Sección decorativa debajo -->
+ <div class="footer-section">
+  <ion-text>
+    <h3>📅 Recordatorio:</h3>
+    <p>Recuerde registrar su asistencia diariamente.</p>
+  </ion-text>
+  <ion-button expand="block" color="success" (click)="openHelp()">
+    <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+    Ayuda y Preguntas Frecuentes
+  </ion-button>
+</div>
+
+</ion-content>
+
+

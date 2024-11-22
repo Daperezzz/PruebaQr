@@ -1,0 +1,76 @@
+.qr-display {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .attendance-table ion-item {
+    margin-top: 10px;
+  }
+  
+  .attendance-table ion-icon {
+    cursor: pointer;
+  }
+  
+  .header-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .header-section h2 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .header-section p {
+    color: gray;
+    font-size: 1rem;
+  }
+
+
+ion-content {
+    --background: #ffeb3b; 
+    color: #333; 
+  }
+  
+  ion-header {
+    background: #2196F3; 
+    color: white; 
+  }
+  
+  ion-button {
+    --background: #2196F3; 
+    --color: white; 
+    border-radius: 5px; 
+    margin: 10px 0; 
+  }
+  
+  ion-item {
+    background: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+  }
+  
+  h1, h2 {
+    color: #333; 
+  }
+  
+  ion-label {
+    color: #2196F3; 
+  }
+  
+  ion-input {
+    color: #333; 
+  }
+  
+  ion-input::placeholder {
+    color: #aaa; 
+  }
+  
+
+  ion-input:focus {
+    border-color: #2196F3;
+  }
+  
+  
+  .attendance-table {
+    margin-top: 20px; 
+  }
+  

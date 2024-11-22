@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>📝 Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Encabezado visual -->
+  <div class="register-header">
+    <h2>¡Crea tu cuenta!</h2>
+    <p>Completa los campos para registrarte</p>
+  </div>
+
+  <!-- Formulario de registro -->
+  <form (ngSubmit)="register()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="nombreEstudiante" name="nombreEstudiante" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Carrera</ion-label>
+      <ion-input [(ngModel)]="carrera" name="carrera" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Semestre</ion-label>
+      <ion-input [(ngModel)]="semestre" name="semestre" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input [(ngModel)]="email" name="email" type="email" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="success" type="submit">
+      <ion-icon slot="start" name="person-add-outline"></ion-icon>
+      Registrarse
+    </ion-button>
+  </form>
+
+  <!-- Botón para regresar -->
+  <ion-button expand="block" fill="clear" color="primary" (click)="goToLogin()">
+    <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+    Volver a Iniciar Sesión
+  </ion-button>
+</ion-content>

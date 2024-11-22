@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>🔑 Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Logo o Encabezado -->
+  <div class="login-header">
+    <h2>Bienvenido de nuevo</h2>
+    <p>Por favor, inicia sesión para continuar</p>
+  </div>
+
+  <!-- Formulario de inicio de sesión -->
+  <form (ngSubmit)="onLogin()">
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input [(ngModel)]="email" name="email" type="email" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="success" type="submit">
+      <ion-icon slot="start" name="log-in-outline"></ion-icon>
+      Iniciar Sesión
+    </ion-button>
+  </form>
+
+  <!-- Acciones adicionales -->
+  <div class="login-actions">
+    <ion-button expand="full" fill="clear" color="dark" (click)="goToRegister()">
+      Crear una cuenta
+    </ion-button>
+    <ion-button expand="full" fill="clear" color="secondary" (click)="goToForgotPassword()">
+      ¿Olvidaste tu contraseña?
+    </ion-button>
+  </div>
+</ion-content>

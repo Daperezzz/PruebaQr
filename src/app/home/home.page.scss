@@ -25,3 +25,70 @@
 #container a {
   text-decoration: none;
 }
+
+.qr-display {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.attendance-table ion-item {
+  margin-top: 10px;
+}
+
+.attendance-table ion-icon {
+  cursor: pointer;
+}
+
+ion-content {
+  --background: #ffeb3b; 
+  color: #333; 
+}
+
+ion-header {
+  background: #2196F3; 
+  color: white; 
+}
+
+ion-button {
+  --background: #2196F3; 
+  --color: white; 
+  border-radius: 5px; 
+  margin: 10px 0; 
+}
+
+ion-item {
+  background: rgba(255, 255, 255, 0.8); 
+}
+
+.home-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.home-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+.home-header p {
+  font-size: 1rem;
+  color: gray;
+  margin: 0;
+}
+ion-card {
+  cursor: pointer;
+  text-align: center;
+}
+ion-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ion-card-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+ion-card-content {
+  font-size: 0.9rem;
+  color: gray;
+}
