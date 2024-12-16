@@ -10,7 +10,7 @@ export class AsistenciaService {
 
   constructor(private http: HttpClient) {}
 
-  // Generar un código QR para una clase con token opcional
+  // Generar un codigo QR para una clase con token opcional
   generarQrClase(seccion: string, token?: string): Observable<string> {
     const headers = token ? new HttpHeaders({ Authorization: `Bearer ${token}` }) : undefined;
     return this.http.get(`${this.apiUrl}/qr`, {

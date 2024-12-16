@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -35,7 +36,7 @@ export class CuentaService {
     }
   }
 
-  // Función para registrar un usuario nuevo y guardar sus datos en Firestore
+
   async register(email: string, password: string, nombreEstudiante: string, carrera: string, semestre: string) {
     try {
       const userCredential = await this.afAuth.createUserWithEmailAndPassword(email, password);
@@ -54,5 +55,10 @@ export class CuentaService {
       console.error("Error en el registro o al guardar datos del usuario: ", error);
       throw error;
     }
+  }
+
+  getCurrentUser() {
+   
+    return of({ id: 1, name: 'Usuario Ejemplo' });
   }
 }

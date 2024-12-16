@@ -4,6 +4,7 @@ import { ModalController, NavController } from '@ionic/angular';
 import { AssignmentModalComponent } from './assignment-modal.component';
 import { ActivatedRoute } from '@angular/router';
 
+
 interface DatoAsignatura {
   seccion: string;
   fecha: string;

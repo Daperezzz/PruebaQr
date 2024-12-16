@@ -1,6 +1,6 @@
 import { CanActivateFn, Router } from '@angular/router';
 import { inject } from '@angular/core';
-import { CuentaService } from '../services/cuenta.service';
+import { CuentaService } from './services/cuenta.service';
 import { map, take } from 'rxjs/operators';
 
 export const authGuard: CanActivateFn = (route, state) => {

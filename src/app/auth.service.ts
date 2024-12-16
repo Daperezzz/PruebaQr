@@ -40,7 +40,7 @@ export class AuthService {
           semestre: semestre,
           email: email
         });
-        console.log("Datos guardados en Firestore"); // Confirmación de que los datos se guardaron
+        console.log("Datos guardados en Firestore"); // Confirmacion de que los datos se guardaron
       }
   
       return result;
